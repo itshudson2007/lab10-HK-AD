@@ -11,15 +11,6 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
-def multiply(x, y):
-    return x * y
-
-def exponent(x, y):
-    return x ** y
-
-def sub(a, b):
-    return a - b
-
 def mul(a, b):
     return a * b
 
