@@ -6,6 +6,30 @@ import calculator
 
 class TestCalculator(unittest.TestCase):
 
+    def test_add(self):
+        self.assertEqual(calculator.add(3, 4), 7)
+        self.assertEqual(calculator.add(-2, 5), 3)
+        self.assertEqual(calculator.add(0, 0), 0)
+
+    def test_subtract(self):
+        self.assertEqual(calculator.subtract(10, 3), 7)
+        self.assertEqual(calculator.subtract(5, 20), -15)
+        self.assertEqual(calculator.subtract(0, 0), 0)
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            calculator.div(10, 0)
+
+    def test_logarithm(self):
+        self.assertAlmostEqual(calculator.logarithm(10, 10), 1)
+        self.assertAlmostEqual(calculator.logarithm(100, 10), 2)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            calculator.logarithm(10, 1)
+        with self.assertRaises(ValueError):
+            calculator.logarithm(10, -2)
+
     def test_multiply(self):
         self.assertEqual(calculator.mul(3, 4), 12)
         self.assertEqual(calculator.mul(-2, 5), -10)
