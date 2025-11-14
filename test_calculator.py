@@ -35,6 +35,3 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(calculator.square_root(0), 0)
         with self.assertRaises(ValueError):
             calculator.square_root(-9)
-
-if __name__ == "__main__":
-    unittest.main()
