@@ -1,3 +1,6 @@
+# https://github.com/itshudson2007/lab10-HK-AD/
+# Partner 1: Hudson Kennedy
+# Partner 2: Alan Daniel
 import unittest
 import calculator
 
