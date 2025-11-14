@@ -5,10 +5,9 @@
 import math
 
 def logarithm(x, y):
-    if x <= 0 or y <= 0 or y == 1:
+    if x <= 0 or x == 1 or y <= 0 or y == 1:
         raise ValueError("Invalid input for logarithm")
     return math.log(x, y)
-
 
 def add(x, y):
     return x + y
@@ -22,7 +21,7 @@ def mul(a, b):
 def div(a, b):
     if b == 0:
         raise ZeroDivisionError("Can't divide by zero")
-    return a / b
+    return b / a
 
 def exp(a, b):
     return a**b
@@ -34,3 +33,4 @@ def square_root(a):
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
+
